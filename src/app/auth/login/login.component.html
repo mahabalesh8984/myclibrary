@@ -1,0 +1,76 @@
+<!-- <p>login works!</p>
+<span (click)="Redirect()">redirect</span> -->
+<div class="login-page">
+    <div class="login-box">
+       
+        <div class="card">
+            
+            
+            <div class="body">
+                 <div class="logo">
+            <a href=""><img src="assets/images/camp.png" style="padding: 5px 0px;"/></a>
+           <!-- <small>Admin BootStrap Based - Material Design</small>-->
+        </div>
+                <form #f="ngForm" id="sign_in" method="POST" name="form" >
+                   <!-- <div class="msg">Sign in to start your session</div>-->
+                     <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">date_range</i>
+                        </span>
+                        <div class="form-line">
+                            <select class="form-control" name="model" [(ngModel)]="user.fyear">
+                                <option value="">Choose Financial Year</option>
+                                <option *ngFor="let acyr of acYears" [value]="acyr.id">{{acyr.ayname}}</option>
+                            </select>
+                        </div>
+                    </div>
+                     <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">school</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="model" [(ngModel)]="user.scode"  placeholder="Institution Code" required >
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control"  name="username" name="model" [(ngModel)]="user.username"  placeholder="Username" required >
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" name="password" name="model" [(ngModel)]="user.password"  placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8 p-t-5">
+                            <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
+                            <label for="rememberme">Remember Me</label>
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block bg-pink waves-effect" type="submit" (click)="login()">LOG IN</button>
+                            <!-- <button class="btn btn-block bg-pink waves-effect">LOG IN</button> -->
+                        </div>
+                    </div>
+                    <div class="row m-t-15 m-b--20">
+                        <div class="col-xs-6">
+                            <a href="">Contact Now!</a>
+                        </div>
+                        <div class="col-xs-6 align-right">
+                            <a href="forgot-password%202.html">Forgot Password?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   
+</div>

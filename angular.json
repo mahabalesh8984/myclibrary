@@ -22,13 +22,17 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+          
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/styles.scss",
+              "./node_modules/primeicons/primeicons.css",
+  "./node_modules/primeng/resources/themes/nova-light/theme.css",
+  "./node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -92,6 +96,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mca"
+    }
+  },
+  "defaultProject": "mca",
+  "cli": {
+    "analytics": false
+  }
 }
